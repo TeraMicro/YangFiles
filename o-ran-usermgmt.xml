@@ -1,0 +1,24 @@
+<!--
+  If there is a need to create a user after simulation,
+  this module should be filled with credentials.
+
+  The snippet in the YANG module o-ran-usermgmt
+
+  must "user/enabled='true'" {
+    error-message "At least one account needs to be enabled.";
+  }
+
+  must be commented in and updated by commanding
+
+  $ sudo sysrepoctl -U O-RAN/o-ran-usermgmt.yang -v3
+
+  Please check the logs in the terminal after setting
+  verbosity to 3 to make sure that there is no errors.
+-->
+<users xmlns="urn:o-ran:user-mgmt:1.0">
+    <user>
+        <name>NETCONF</name>
+        <account-type>PASSWORD</account-type>
+        <enabled>true</enabled>
+    </user>
+</users>
